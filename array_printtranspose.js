@@ -1,8 +1,11 @@
-function transpose(matrix) {
+/**
+ * @param {number[][]} matrix
+ * @return {number[][]}
+ */
+function transposeMatrix(matrix) {
     let transpose = [];
-    let left = 0, right = matrix.length - 1, top = 0, bottom = matrix[0].length;
-    while (top < bottom) {
-        // left to right
+    let left = 0, right = matrix.length - 1, top = 0, bottom = matrix[0].length-1;
+    while (top <= bottom) {
         let row = [];
         for (let i = 0; i <= right; i++) {
             row.push(matrix[i][left]);
@@ -15,10 +18,13 @@ function transpose(matrix) {
     return transpose;
 }
 
+/**
+ * @param {number[][]} matrix
+ */
 function displayMatrix(matrix) {
-    for (let i = 0; i < matrix.length; i++) {
-        console.log(matrix[i].join(' '));
-    }
+  for (let i = 0; i < matrix.length; i++) {
+    console.log(matrix[i].join(' '));
+  }
 }
 
 function createMatrix(rows, cols, elements) {
@@ -36,9 +42,14 @@ function createMatrix(rows, cols, elements) {
     return matrix;
 }
 
+/**
+ * @param {string} rows
+ * @param {string} cols
+ * @param {string[]} elements
+ */
 function takeMatrixInput(rows, cols, elements) {
     let matrix = createMatrix(rows, cols, elements);
-    let transposedMatrix = transpose(matrix);
+    let transposedMatrix = transposeMatrix(matrix);
     displayMatrix(transposedMatrix);
 }
 

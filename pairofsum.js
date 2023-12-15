@@ -1,16 +1,19 @@
 function findSumPairs(arr, targetSum) {
-    let sumArrays = [];
-    let right;
+    let set = new Set();
+    let result = [];
     for (let i = 0; i < arr.length; i++) {
-        for (let j = i; j < arr.length; j++) {
-            if (arr[i] + arr[j] === targetSum && i !== j && right !== arr[j]) {
-                right = arr[j];
-                sumArrays.push([arr[i], arr[j]]);
-            }
+        let compliment = targetSum - arr[i];
+        let complimentIndex = arr.indexOf(compliment);
+        if (complimentIndex !== -1 &&
+            complimentIndex !== i &&
+            !set.has(arr[i])
+        ) {
+            result.push([arr[i], compliment]);
+            set.add(compliment);
         }
     }
 
-    return sumArrays;
+    return result;
 }
 
 function findSumPairs(arr, targetSum) {
