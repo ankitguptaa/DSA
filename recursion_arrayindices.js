@@ -1,20 +1,18 @@
 function indicesRecursive(arr, target, index) {
-    if (index >= arr.length) {
-        return arr;
+    if(index >= arr.length) {
+        return [];
     }
 
-    if (arr[index] === target) {
-        arr[index] = index;
+    if(arr[index] === target) {
+        return [index] + indicesRecursive(arr, target, index+1);
     } else {
-        arr.splice(index, 1); 
+        return indicesRecursive(arr, target, index+1);
     }
-
-    index++;
-    return indicesRecursive(arr, target, index);
 }
 
 function indicesMain(arr, target) {
-   return indicesRecursive(arr, target, 0);
+let output = indicesRecursive(arr, target, 0);
+return [...output];
 }
 
 let result = indicesMain([1,2,3,2,4,2,5], 2);

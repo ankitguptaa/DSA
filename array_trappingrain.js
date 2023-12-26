@@ -76,7 +76,7 @@ console.log(result) //1
 result = trapRainWater([3, 0, 0, 2, 0, 4])
 console.log(result) //10
 result = trapRainWater([4, 2, 0, 3])
-console.log(result) //3
+console.log(result) //expected 4, got 3
 result = trapRainWater([0, 1, 0, 3, 0, 2, 0])
 console.log(result) //4
 

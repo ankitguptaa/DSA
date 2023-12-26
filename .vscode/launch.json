@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\hasmap_longestconsonantsandvowels.js"
+            "program": "${workspaceFolder}\\hashing_groupanagrams.js"
         }
     ]
 }
