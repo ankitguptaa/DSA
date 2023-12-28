@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\hashing_groupanagrams.js"
+            "program": "${workspaceFolder}\\hashing_validsudoku.js"
         }
     ]
 }
