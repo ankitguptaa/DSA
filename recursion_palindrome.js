@@ -1,7 +1,16 @@
-function isPalindrome(arr, first, last) {
-    if (first === last || first === last - 1) {
-        return arr[first] === arr[last];
+function isPalindromeBruteForce(str) {
+    // Base case: if the string has 0 or 1 characters, it's a palindrome
+    if (str.length <= 1) {
+        return true;
     }
-    
-    return isPalindrome(arr, first + 1, last - 1) && arr[first] === arr[last];
+
+    // Compare the first and last characters
+    if (str[0] !== str[str.length - 1]) {
+        return false;
+    }
+
+    // Recur with the string excluding the first and last characters
+    return isPalindromeBruteForce(str.slice(1, -1));
 }
+
+console.log(isPalindromeBruteForce("ASDFDSA"));

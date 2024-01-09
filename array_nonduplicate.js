@@ -1,7 +1,3 @@
-/**
- * @param {number[]} arr
- * @return {number}
- */
 function findNonDuplicateElement(arr) {
     let unique = [];
     for (let i = 0; i < arr.length; i++) {
