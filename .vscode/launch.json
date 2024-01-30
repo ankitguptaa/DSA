@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\recursion_possiblesubsequence.js"
+            "program": "${workspaceFolder}\\sort_insertion.js"
         }
     ]
 }
